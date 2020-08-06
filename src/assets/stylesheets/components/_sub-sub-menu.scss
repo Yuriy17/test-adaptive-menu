@@ -1,0 +1,27 @@
+.sub-sub-menu {
+
+  // .sub-sub-menu__link
+
+  &__link {
+    color: $header-text-color;
+  }
+
+  // .sub-sub-menu__arrow
+
+  &__arrow {
+  }
+
+  // .sub-sub-menu__list
+
+  &__list {
+    flex-direction: column;
+
+  }
+
+  // .sub-sub-menu__item
+
+  &__item {
+
+
+  }
+}

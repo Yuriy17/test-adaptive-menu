@@ -1,0 +1,42 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+}
+
+.wrapper{
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+
+.link {
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:focus {
+    outline: 2px $primary-text-color;
+    outline-style: dotted;
+  }
+}
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.arrow{
+  display: none;
+  height: 20px;
+  width: 20px;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  transform: rotate(-135deg);
+  @extend %transition;
+  &_active{
+    transform: rotate(-135deg);
+  }
+}

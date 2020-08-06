@@ -1,0 +1,35 @@
+.sub-menu {
+
+  // .sub-menu__link
+
+  &__link {
+    font-size: 2rem;
+    color: $header-text-color;
+  }
+
+  // .sub-menu__arrow
+
+  &__arrow {
+  }
+
+  // .sub-menu__list
+
+  &__list {
+    position: absolute;
+    min-width: 100%;
+    left: 0;
+    top: 100%;
+    background-color: $secondary-color;
+
+    clip: rect(0 0 0 0 );
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+  // .sub-menu__item
+
+  &__item {
+    position: relative;
+  }
+}

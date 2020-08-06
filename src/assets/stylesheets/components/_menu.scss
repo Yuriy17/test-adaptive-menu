@@ -1,0 +1,143 @@
+.menu {
+  position: relative;
+  z-index: 2;
+  color: $header-text-color;
+
+  // .menu__toggle
+  &__toggle {
+    @at-root label.menu__toggle,
+      &[type='checkbox'] {
+      //display: none;
+      display: none;
+    }
+    &[type='checkbox'] {
+      @include media-tablet {
+        display: block;
+        position: relative;
+        max-height: 5000px;
+        transition: max-height 2s ease-in;
+      }
+    }
+
+    @at-root label.menu__toggle {
+      position: absolute;
+      height: 29px;
+      width: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      cursor: pointer;
+    }
+  }
+  input.toggleMenu:checked + label.toggleMenu {
+    background: #000;
+    color: #fff;
+  }
+  input.toggleMenu:checked ~ ul,
+  input.toggleSubmenu:checked ~ ul {
+    display: block;
+    position: relative;
+    max-height: 5000px;
+    transition: max-height 2s ease-in;
+  }
+
+  // .menu__burger
+
+  &__burger {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: #f5b895;
+
+    &::before {
+      display: block;
+      transform: translateY(-10px);
+      content: '';
+      display: block;
+      background-color: #f5b895;
+      height: 3px;
+      @extend %transition;
+    }
+    &::after {
+      display: block;
+      transform: translateY(8px);
+      content: '';
+      display: block;
+      background-color: #f5b895;
+      height: 3px;
+      @extend %transition;
+    }
+  }
+
+  // .menu__list
+
+  &__list {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 3px 0;
+  }
+
+  // .menu__item
+
+  &__item {
+    
+    &:hover, &:focus-within {
+      & > ul.sub-menu__list {
+        clip: auto;
+        width: 100%;
+        height: auto;
+        margin: auto;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        height: 3px;
+        background-color: #f5b895;
+      }
+    }
+  }
+
+  // .menu__link
+
+  &__link {
+    display: block;
+    font-size: 2.2rem;
+    padding: 10px 15px 20px;
+    color: $header-text-color;
+  }
+}
+
+.menu {
+  // .menu__toggle
+
+  &__toggle {
+  }
+
+  // .menu__burger
+
+  &__burger {
+  }
+
+  // .menu__list
+
+  &__list {
+  }
+
+  // .menu__item
+
+  &__item {
+  }
+
+  // .menu__link
+
+  &__link {
+  }
+}
