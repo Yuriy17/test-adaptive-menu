@@ -40,7 +40,9 @@
     width: 1px;
     height: 1px;
     margin: -1px;
-
+    -webkit-box-shadow: 0px 6px 10px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 10px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 10px -1px rgba(0,0,0,0.75);
     @include media-tablet {
       flex-direction: column;
     }
@@ -52,8 +54,10 @@
     
     position: relative;
     padding: 5px 10px;
-    border-bottom: 1px solid #ffffff42;
-
+    @include media-tablet {
+      border-bottom: 1px solid #ffffff42;
+    }
+    
     & > .arrow_active {
       & ~ ul.sub-sub-menu__list {
         visibility: visible;

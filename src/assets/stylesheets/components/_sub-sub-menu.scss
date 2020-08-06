@@ -26,13 +26,14 @@
     flex-direction: column;
     padding-inline-start: 0;
     @extend %transition;
-    
-    visibility: hidden;
-    opacity: 0;
-    clip: rect(0 0 0 0 );
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    @include media-tablet {
+      visibility: hidden;
+      opacity: 0;
+      clip: rect(0 0 0 0 );
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+    }
   }
 
   // .sub-sub-menu__item

@@ -2,16 +2,32 @@
   position: relative;
   z-index: 2;
   color: $header-text-color;
+  @include media-tablet{
+    padding-top: 50px;
+  }
 
   & > .menu__toggle {
     display: none;
-    &:checked ~ ul.menu__list {
-      visibility: visible;
-      opacity: 1;
-      clip: auto;
-      width: 100%;
-      height: auto;
-      margin: auto;
+    &:checked {
+      & ~ ul.menu__list {
+        visibility: visible;
+        opacity: 1;
+        clip: auto;
+        width: 100%;
+        height: auto;
+        margin: auto;
+      }
+
+      & + label > #burger {
+        height: 0;
+        &::after{
+          transform: rotate(45deg);
+        }
+        &::before{
+          transform: rotate(-45deg);
+        }
+        
+      } 
     }
   }
   & > label.menu__toggle {
@@ -60,19 +76,23 @@
     background-color: #f5b895;
 
     &::before {
+      position: absolute;
+      left: 0;
+      width: 100%;
       display: block;
       transform: translateY(-8px);
       content: '';
-      display: block;
       background-color: #f5b895;
       height: 2px;
       @extend %transition;
     }
     &::after {
+      position: absolute;
+      left: 0;
+      width: 100%;
       display: block;
-      transform: translateY(6px);
+      transform: translateY(8px);
       content: '';
-      display: block;
       background-color: #f5b895;
       height: 2px;
       @extend %transition;
@@ -88,7 +108,6 @@
     padding: 3px 0 0;
 
     @include media-tablet {
-      top: 50px;
       visibility: hidden;
       opacity: 0;
       transition: all 0.6s ease-in-out;
@@ -187,8 +206,6 @@
     }
   }
 
-  &__arrow {
-  }
 }
 
 .arrow {
