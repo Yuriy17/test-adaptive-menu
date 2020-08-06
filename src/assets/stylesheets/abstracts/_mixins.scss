@@ -14,6 +14,10 @@
     }
 }
 
+@mixin media-content {
+    @media (max-width: $max-width) { @content; }
+}
+
 @mixin media-laptop {
     @media (max-width: $content-width) { @content; }
 }
@@ -24,4 +28,9 @@
 
 @mixin media-mobile {
     @media (max-width: $mobile-width) { @content; }
+}
+
+
+@mixin media-min-tablet {
+    @media (min-width: $tablet-width) { @content; }
 }

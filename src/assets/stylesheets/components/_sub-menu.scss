@@ -3,8 +3,19 @@
   // .sub-menu__link
 
   &__link {
+    display: block;
     font-size: 2rem;
+    padding: 15px 0;
     color: $header-text-color;
+    @include media-laptop {
+      font-size: 1.5rem;
+      padding: 12px 0;
+    }
+  
+    @include media-tablet {
+      font-size: 1.3rem;
+      padding: 10px 0;
+    }
   }
 
   // .sub-menu__arrow
@@ -15,21 +26,48 @@
   // .sub-menu__list
 
   &__list {
+    display: flex;
     position: absolute;
     min-width: 100%;
     left: 0;
     top: 100%;
     background-color: $secondary-color;
-
+    padding-inline-start: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .6s ease-in-out;
     clip: rect(0 0 0 0 );
     width: 1px;
     height: 1px;
     margin: -1px;
+
+    @include media-tablet {
+      flex-direction: column;
+    }
   }
 
   // .sub-menu__item
 
   &__item {
+    
     position: relative;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ffffff42;
+
+    & > .arrow_active {
+      & ~ ul.sub-sub-menu__list {
+        visibility: visible;
+        opacity: 1;
+        @extend %transition;
+        clip: auto;
+        width: 100%;
+        height: auto;
+        margin: auto;
+      }
+    }
+  }
+
+  &__arrow {
+    
   }
 }

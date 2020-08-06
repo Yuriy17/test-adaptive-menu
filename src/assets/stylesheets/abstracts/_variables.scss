@@ -1,20 +1,11 @@
-$primary-color:   #0f4c81;
-$secondary-color:   #658DC6;
-$third-color: #84898C;
-$active-color:#F5B895;
-$primary-text-color:   rgb(18, 18, 18);
-$header-text-color:   rgb(255, 255, 255);
+$primary-color: #0f4c81;
+$secondary-color: #658dc6;
+$third-color: #84898c;
+$active-color: #f5b895;
+$primary-text-color: rgb(18, 18, 18);
+$header-text-color: rgb(255, 255, 255);
 
 $max-width: 1440px;
 $content-width: 1020px;
 $tablet-width: 768px;
 $mobile-width: 375px;
-
-$grid-breakpoints: (
-  xs: 0,
-  sm: 375px,
-  md: 768px,
-  xl: 1024px
-) ;
-
-

@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  height: 61px;
   width: 100%;
   top: 0;
   left: 0;
@@ -14,9 +15,15 @@
     height: 100%;
     background-color: $primary-color;
   }
-}
 
-.arrow {
+  @include media-laptop {
+    height: 55px;
+  }
+
+  @include media-tablet {
+    height: 50px;
+    min-height: 50px;
+  }
 }
 
 

@@ -7,18 +7,26 @@ body {
   font-weight: normal;
 }
 
-.wrapper{
+.wrapper {
   max-width: $max-width;
   margin: 0 auto;
+  @include media-content {
+    max-width: $content-width;
+  }
+  @include media-laptop {
+    max-width: $tablet-width;
+  }
+  // @include media-tablet {
+  //   max-width: $mobile-width;
+  // }
 }
-
 
 .link {
   text-decoration: none;
   white-space: nowrap;
 
   &:focus {
-    outline: 2px $primary-text-color;
+    outline: 1px $primary-text-color;
     outline-style: dotted;
   }
 }
@@ -26,17 +34,4 @@ body {
 .list {
   display: flex;
   list-style: none;
-}
-
-.arrow{
-  display: none;
-  height: 20px;
-  width: 20px;
-  border-top: 3px solid black;
-  border-left: 3px solid black;
-  transform: rotate(-135deg);
-  @extend %transition;
-  &_active{
-    transform: rotate(-135deg);
-  }
 }

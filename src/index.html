@@ -12,20 +12,22 @@
 <body>
   <header class="header">
     <nav class="menu wrapper">
-      <input type="checkbox" name="toggle" class="menu__toggle">
-      <label for="menu" class="menu__toggle"><span class="menu__burger"></span></label>
+      <input type="checkbox" id="toggle" name="toggle" class="menu__toggle">
+      <label for="toggle" class="menu__toggle"><span class="menu__burger"></span></label>
       <ul class="menu__list list">
         <li class="menu__item">
           <a class="menu__link link" href="#">Элемент 1</a>
         </li>
         <li class="menu__item">
           <a class="menu__link link" href="#">Элемент 2</a>
+          <span class="menu__arrow arrow"></span>
           <ul class="sub-menu__list list">
             <li class="sub-menu__item">
               <a class="sub-menu__link link" href="#">Элемент 2.1</a>
             </li>
             <li class="sub-menu__item">
               <a class="sub-menu__link link" href="#">Элемент 2.2</a>
+              <span class="sub-menu__arrow arrow"></span>
               <ul class="sub-sub-menu__list list">
                 <li class="sub-sub-menu__item">
                   <a class="sub-sub-menu__link link" href="#">Элемент 2.2.1</a>
@@ -57,6 +59,7 @@
         </li>
         <li class="menu__item">
           <a class="menu__link link" href="#">Элемент 4</a>
+          <span class="menu__arrow arrow"></span>
           <ul class="sub-menu__list list">
             <li class="sub-menu__item">
               <a class="sub-menu__link link" href="#">Элемент 4.1</a>
